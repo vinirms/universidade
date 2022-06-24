@@ -1,0 +1,105 @@
+.container{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin: auto;
+    background-color: #FFD826;
+    border-radius: 0 50px;
+    box-shadow: 2px 2px 10px  blue;
+}
+
+
+.formContainer h1{
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(128, 128, 128);
+    margin-bottom: 20px;
+    margin-top: 50px;
+    font-size: 2rem;
+}
+
+.formContainer button{
+    margin-bottom: 30px;
+}
+
+.formItens{
+    height:auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.formItens input , textarea{
+    border: 2px solid rgb(252, 252, 255);
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+    border: 2px solid blue;
+}
+
+.formName{
+    margin-top:20px ;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.formEmail{
+    margin-top:10px ;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formContato{
+    margin-top:10px ;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formAluno{
+    margin-top:10px ;
+    display: flex;
+}
+
+.formAluno label{
+    margin-left: 15px;
+}
+
+.formAluno input{
+    margin-left: 5px;
+}
+
+.formMensagem{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    
+}
+
+.btnForm{
+    border: 2px solid rgb(50, 4, 255);
+    background-color: transparent;
+    color: #1900ff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btnForm:hover{
+    border: 2px solid rgb(13, 5, 255);
+    color: #174EE8;
+    font-weight: bold;
+    background-color: white;
+}

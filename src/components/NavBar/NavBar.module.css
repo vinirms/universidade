@@ -1,0 +1,65 @@
+.navBar{
+    height: 100px;
+    background-color: #174EE8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 100%;
+}
+
+.navBar img{
+    height: 50px;
+}
+
+.navBar ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.navBar ul a{
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+
+.hoverBorder::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    visibility: hidden;
+    transition: 0.4s ease-in-out ;
+    transform: scaleX(0);
+}
+
+.hoverBorder:hover:before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.hoverBorder:hover{
+    color: #FFD826;
+    transition: 0.4s;
+}
+
+
+.botaoReciclavel{
+    border: 2px solid white;
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.botaoReciclavel:hover{
+    border: 2px solid rgb(255, 255, 255);
+    color: #174EE8;
+    font-weight: bold;
+    background-color: white;
+
+}

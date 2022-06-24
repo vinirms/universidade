@@ -1,0 +1,36 @@
+.sessaoEstrutura{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+   background-color: #FFD826 ;
+   padding: 10px;
+}
+
+.conteudoSessao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    transition: 0.5s;
+}
+
+.conteudoSessaoImg{
+    height: 200px;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+
+.conteudoSessao img:hover{
+    height: 250px;
+    transition: 0.5s;
+}
+.conteudoSessao:hover{
+    height: 300px;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.5s;
+}

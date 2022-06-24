@@ -1,0 +1,100 @@
+.sobreConteudo{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobreImgCapa img{
+    border-radius: 0 50px ;
+    box-shadow: 2px 2px 14px 2px rgb(19, 7, 255);
+}
+
+.sobreConteudo img{
+    margin-top: 50px;
+}
+
+.sobreTextos h1 , h2{
+    text-align: center;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-bottom:  2px solid #FFD826;
+    padding-bottom: 5px;
+}
+
+.sobreTextos p{
+    margin-top:20px ;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.missaoVisao{
+    display: flex ;
+    margin-top: 50px;
+    gap: 50px;
+   
+}
+
+.missaoVisaoParagrafo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.missaoVisaoParagrafo h2{
+    text-align: center;
+}
+
+.missaoVisaoParagrafo p{
+    text-align: justify;
+
+}
+
+.missaoVisaoParagrafo img{
+    height: 350px;
+    
+}
+
+
+.valoresObjetivos{
+    margin-top: 20px;
+}
+
+.valoresObjetivos h2{
+    text-align: center;
+}
+
+.valoresObjetivos p{
+    text-align: justify;
+}
+
+@media (max-width: 800px){
+    .sobreImgCapa{
+        min-width: 100%;
+    }
+
+    .missaoVisao{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .missaoVisaoParagrafo{
+        width: 80%;
+    }
+
+    .valoresObjetivos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .valoresObjetivosParagrafo{
+        width: 90%;
+    }
+}

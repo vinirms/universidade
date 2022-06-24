@@ -1,0 +1,163 @@
+/* corpo do artigo */
+.mainArticle{
+    /* background-color: rgba(207, 206, 206, 0.374); */
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* imagem de capa mais animaçao da imagem */
+
+.imgContainer{
+    cursor: pointer;
+    transition: 0.3s;
+    filter: grayscale(0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+.imgWrapper img{
+    max-width: 100%;
+}
+
+.imgContainer:hover{
+    filter: none;
+}
+
+
+.imgWrapper::before{
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    display: block;
+    border: 3px solid #0D0DB3;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.imgContainer:hover{
+    visibility: visible;
+    opacity: 1;
+}
+
+.imgContainer:hover .imgWrapper::before{
+    height:410px;
+    width: 895px;
+    opacity: 1;
+}
+
+/* main conteudo  */
+
+.mainConteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4040FF;
+}
+
+.conteudoInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    gap: 10px;
+}
+
+.conteudoInfo h1{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.modalidade{
+    height: 150px;
+    background-color:#FFD826 ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #494954;
+}
+
+.modalidade h1{
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.opcoes {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+}
+.opcoes input[type=search]{
+    min-width: 30%;
+    
+}
+.opcoes select{
+    min-width:20% ;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+@media (max-width:800px) {
+    .opcoes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .main-conteudo{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 
+        20px;
+    }
+
+    
+}
+
+
+.botaoReciclavel{
+    border: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: #f7f5ff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.botaoReciclavel:hover{
+    border: 2px solid #0044ff;
+    color: #174EE8;
+    font-weight: bold;
+    background-color: white;
+
+}
+
+.botaoModalidade{
+    border: 2px solid rgb(55, 0, 255);
+    background-color: transparent;
+    color: #0400ff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.botaoModalidade:hover{
+    border: 2px solid rgb(255, 255, 255);
+    color: #0905ff;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+
+}

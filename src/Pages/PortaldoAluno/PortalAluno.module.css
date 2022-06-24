@@ -1,0 +1,18 @@
+.headerPortal{
+    height: 150px;
+    background-color: brown;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.navPortal ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
