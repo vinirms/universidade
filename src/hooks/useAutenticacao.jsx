@@ -6,7 +6,7 @@ import {
 } from "firebase/auth";
 import { async } from "@firebase/util";
 
-const autenticacao = () => {
+export const useAutenticacao = () => {
   const autenticar = getAuth();
 
   const criarUser = async (data) => {
@@ -16,6 +16,8 @@ const autenticacao = () => {
         data.email,
         data.senha
       );
+
+      return user;
     } catch (error) {
       console.log(error.message);
     }
@@ -29,5 +31,5 @@ const autenticacao = () => {
     }
   };
 
-  return { criarUser, login };
+  return { autenticar, criarUser, login };
 };

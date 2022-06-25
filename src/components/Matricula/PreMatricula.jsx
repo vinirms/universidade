@@ -3,6 +3,7 @@ import styles from "./PreMatricula.module.css";
 import React from "react";
 import { useState } from "react";
 import { useAutenticacao } from "../../hooks/useAutenticacao";
+import { useNavigate } from "react-router-dom";
 
 const PreMatricula = () => {
   const [nome, setNome] = useState("");
@@ -11,8 +12,8 @@ const PreMatricula = () => {
   const [confirmacao, setConfirmacao] = useState("");
 
   const { criarUser } = useAutenticacao();
-
-  const handleSubmit = (e) => {
+  const navegate = useNavigate();
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const usuario = {
@@ -21,8 +22,12 @@ const PreMatricula = () => {
       senha,
       confirmacao,
     };
+    //
+    const resposta = await criarUser(usuario);
 
-    console.log(usuario);
+    if (resposta) {
+      return navegate("/");
+    }
   };
 
   return (
