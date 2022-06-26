@@ -32,7 +32,7 @@ function App() {
     <>
       <AutenticacaoProvider value={{ user }}>
         <BrowserRouter>
-          <NavBar />
+          {/* <NavBar /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
@@ -44,7 +44,7 @@ function App() {
             <Route path="/portal" element={<PortalAluno />} />
             <Route path="/matricula" element={<Matricula />} />
           </Routes>
-          <Rodape />
+          {/* <Rodape /> */}
         </BrowserRouter>
       </AutenticacaoProvider>
     </>
