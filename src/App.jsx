@@ -39,9 +39,12 @@ function App() {
             <Route path="/contato" element={<Contato />} />
             <Route
               path="/areadoaluno"
-              element={!user ? <Matricula /> : <Navigate to={"/portal"} />}
+              element={!user ? <AreaAluno /> : <Navigate to="/portal" />}
             />
-            <Route path="/portal" element={<PortalAluno />} />
+            <Route
+              path="/portal"
+              element={user ? <PortalAluno /> : <Navigate to="/" />}
+            />
             <Route path="/matricula" element={<Matricula />} />
           </Routes>
           {/* <Rodape /> */}

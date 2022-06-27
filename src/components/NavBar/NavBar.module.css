@@ -1,5 +1,5 @@
 .navBar{
-    height: 100px;
+    min-height: 10vh;
     background-color: #174EE8;
     display: flex;
     justify-content: space-around;
@@ -19,7 +19,7 @@
 
 .navBar ul a{
     text-decoration: none;
-    padding: 5px;
+    margin-right: 5px;
     color: rgb(255, 255, 255);
     position: relative;
 }
@@ -62,4 +62,38 @@
     font-weight: bold;
     background-color: white;
 
+}
+
+/* hamburguer */
+.btnMobile{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    display: none;
+}
+.trace{
+    width: 30px;
+    height: 2px;
+    margin-top: 8px;
+    background-color: black;
+}
+
+@media (max-width:800px) {
+    .navBar {
+       display: flex;
+        
+    }
+
+  
+    .navBar ul{
+        position: absolute;
+        flex-direction: column;
+        right: 60px;
+        top: 60px;
+
+    }
+    
 }

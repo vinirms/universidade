@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import capa from "../../imagens/capa.png";
 import professor from "../../imagens/img2.jpg";
 import Button from "../Button/Button";
@@ -23,12 +24,14 @@ const MainArticle = () => {
             <option value="Pós-Graduaçao">Pós-Graduação</option>
           </select>
           <input type="search" placeholder="Digite aqui seu curso" />
-          <Button
-            conteudo={"Inscreva-se"}
-            lar={150}
-            alt={40}
-            btn={botaoModalidade}
-          />
+          <Link to="/matricula">
+            <Button
+              conteudo={"Inscreva-se"}
+              lar={150}
+              alt={40}
+              btn={botaoModalidade}
+            ></Button>
+          </Link>
         </div>
       </div>
 

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "./AreaAluno.module.css";
 import logo from "../../imagens/logo.png";
 import { useAutenticacao } from "../../hooks/useAutenticacao";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button/Button";
 
 const AreaAluno = () => {
   const [email, setEmail] = useState("");
@@ -70,7 +72,8 @@ const AreaAluno = () => {
               </div>
             </div>
 
-            <button>Entrar</button>
+            <Button conteudo="Entrar" alt={35} lar={80}></Button>
+            <Link to="/matricula">Inscreva-se</Link>
           </form>
         </div>
       </div>
