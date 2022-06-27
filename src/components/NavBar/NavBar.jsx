@@ -20,9 +20,9 @@ const NavBar = () => {
   const { logout } = useAutenticacao();
 
   return (
-    <nav className={styles.navBar}>
+    <nav className={[styles.navBar, styles.active]} id="nav">
       <img src={Logo} alt="Logo Universidade" />
-      <button className={styles.btnMobile}>
+      <button className={styles.btnMobile} id="btn">
         <div className={styles.trace}></div>
         <div className={styles.trace}></div>
         <div className={styles.trace}></div>

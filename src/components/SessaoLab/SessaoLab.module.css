@@ -1,9 +1,10 @@
 .sessaoEstrutura{
+    height: 100%;
     width: 60%;
     margin: auto;
     display: flex;
     flex-direction: column;
-   background-color: #FFD826 ;
+   background-color: #ffd726b1 ;
    padding: 10px;
 }
 
@@ -24,7 +25,7 @@
 }
 
 
-.conteudoSessao img:hover{
+/* .conteudoSessao img:hover{
     height: 250px;
     transition: 0.5s;
 }
@@ -33,4 +34,28 @@
     z-index: 1;
     cursor: pointer;
     transition: 0.5s;
+} */
+
+@media (max-width:800px) {
+    .sessaoEstrutura img{
+        width: 300px;
+    }
+    .sessaoEstrutura{
+        width: 400px;
+    }
+
+    .conteudoSessao{
+        flex-direction: column-reverse;
+        height: 550px;
+        border-bottom: 2px solid rgb(29, 2, 150);
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    .conteudoSessaoImg{
+    flex-direction: column;
+     
+      height: 430px;
+    }
 }

@@ -72,8 +72,8 @@
 }
 
 @media (max-width: 800px){
-    .sobreImgCapa{
-        min-width: 100%;
+    .sobreImgCapa img{
+        width: 400px;
     }
 
     .missaoVisao{
@@ -84,7 +84,11 @@
         text-align: center;
     }
     .missaoVisaoParagrafo{
-        width: 80%;
+        width: 400px;
+    }
+
+    .missaoVisaoParagrafo img{
+        width: 400px;
     }
 
     .valoresObjetivos{
@@ -93,6 +97,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+       
     }
     .valoresObjetivosParagrafo{
         width: 90%;

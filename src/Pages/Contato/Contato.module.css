@@ -13,7 +13,7 @@
     align-items: center;
     width: 500px;
     margin: auto;
-    background-color: #FFD826;
+    background-color: #ffd726b1;
     border-radius: 0 50px;
     box-shadow: 2px 2px 10px  blue;
 }
@@ -102,4 +102,16 @@
     color: #174EE8;
     font-weight: bold;
     background-color: white;
+}
+
+@media (max-width:800px) {
+   
+    .formContainer{
+        width: 400px;
+   
+    }
+
+    .formItens{
+        padding: 20px;
+    }
 }

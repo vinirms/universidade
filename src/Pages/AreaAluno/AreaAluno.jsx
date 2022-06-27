@@ -9,6 +9,7 @@ const AreaAluno = () => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
+  const btn = styles.botaoReciclavel;
   const { login } = useAutenticacao();
 
   const handleSubmit = async (e) => {
@@ -72,7 +73,7 @@ const AreaAluno = () => {
               </div>
             </div>
 
-            <Button conteudo="Entrar" alt={35} lar={80}></Button>
+            <Button conteudo="Entrar" alt={35} lar={80} btn={btn}></Button>
             <Link to="/matricula">Inscreva-se</Link>
           </form>
         </div>

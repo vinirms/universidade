@@ -78,9 +78,9 @@
     font-weight: bold;
 }
 .modalidade{
-    height: 150px;
-    background-color:#FFD826 ;
-    width: 100%;
+    min-height: 150px;
+    background-color:#ffd726b1  ;
+    min-width:60vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,7 +103,9 @@
 }
 .opcoes input[type=search]{
     min-width: 30%;
-    
+    outline: none;
+    padding: 2px 10px;
+    border-radius: 5px;
 }
 .opcoes select{
     min-width:20% ;
@@ -120,14 +122,37 @@
         align-items: center;
         flex-wrap: wrap;
     }
-    .main-conteudo{
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 
-        20px;
+    .mainConteudo{
+     display: flex;
+     flex-direction: column-reverse;
+     gap: 20px;
+     padding-bottom: 20px;
     }
 
-    
+    .mainConteudo img{
+        width: 400px;
+    }
+
+    .imgWrapper{
+        width: 400px;
+    }
+
+    .imgWrapper::before{
+        display: none;
+    }
+
+    .opcoes{
+        gap: 20px;
+    }
+    .modalidade{
+        width: 400px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .modalidade h1{
+        font-size: .8em;
+    }
 }
 
 

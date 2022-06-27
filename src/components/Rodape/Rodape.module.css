@@ -65,3 +65,16 @@
     display: flex;
     gap: 10px;
 }
+
+@media (max-width:800px) {
+    .rodapeNav{
+        display: none;
+    }
+
+    .rodapeEndereço img{
+        width: 150px;
+    }
+    .rodapeEndereço p{
+        font-size: .8em;
+    }
+}
