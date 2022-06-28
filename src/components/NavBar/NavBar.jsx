@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../imagens/logo.png";
-import styles from "./NavBar.module.css";
+import styles from "./NavBar.css";
 import { Link, NavLink } from "react-router-dom";
 import Button from "../Button/Button";
 // Paginas
@@ -12,32 +12,39 @@ import Sobre from "../../Pages/Sobre/Sobre";
 //hook
 import { useAutenticacaoValue } from "../../Context/useContextLogin";
 import { useAutenticacao } from "../../hooks/useAutenticacao";
+import { useState } from "react";
 
 const NavBar = () => {
-  const botaoNavBar = styles.botaoReciclavel;
-
   const { user } = useAutenticacaoValue();
   const { logout } = useAutenticacao();
 
+  //menu hamburguer
+  const [active, setActive] = useState("navMenu");
+  const [toggleIcon, setToggleIcon] = useState("navToggle");
+  const navToggle = () => {
+    active === "navMenu"
+      ? setActive("navMenu navActive")
+      : setActive("navMenu");
+
+    toggleIcon === "navToggle"
+      ? setToggleIcon("navToggle toggle")
+      : setToggleIcon("navToggle");
+  };
+
   return (
-    <nav className={[styles.navBar, styles.active]} id="nav">
+    <nav className="navBar" id="nav">
       <img src={Logo} alt="Logo Universidade" />
-      <button className={styles.btnMobile} id="btn">
-        <div className={styles.trace}></div>
-        <div className={styles.trace}></div>
-        <div className={styles.trace}></div>
-      </button>
       <div>
-        <ul>
+        <ul className={active}>
           {!user && (
             <>
-              <NavLink className={styles.hoverBorder} to="/">
+              <NavLink className="hoverBorder" to="/">
                 Home
               </NavLink>
-              <NavLink className={styles.hoverBorder} to="/sobre">
+              <NavLink className="hoverBorder" to="/sobre">
                 Sobre
               </NavLink>
-              <NavLink className={styles.hoverBorder} to="/contato">
+              <NavLink className="hoverBorder" to="/contato">
                 Contato
               </NavLink>
               <NavLink to="/areadoaluno">
@@ -45,23 +52,23 @@ const NavBar = () => {
                   conteudo={"Area do Aluno"}
                   alt={35}
                   lar={160}
-                  btn={botaoNavBar}
+                  btn={"botaoReciclavel"}
                 />
               </NavLink>
             </>
           )}
           {user && (
             <>
-              <NavLink className={styles.hoverBorder} to="/">
+              <NavLink className="hoverBorder" to="/">
                 Home
               </NavLink>
-              <NavLink className={styles.hoverBorder} to="/sobre">
+              <NavLink className="hoverBorder" to="/sobre">
                 Sobre
               </NavLink>
-              <NavLink className={styles.hoverBorder} to="/contato">
+              <NavLink className="hoverBorder" to="/contato">
                 Contato
               </NavLink>
-              <NavLink className={styles.hoverBorder} to="/portal">
+              <NavLink className="hoverBorder" to="/portal">
                 Portal
               </NavLink>
               <Link to="/areadoaluno">
@@ -70,12 +77,17 @@ const NavBar = () => {
                   conteudo={"Sair"}
                   alt={35}
                   lar={60}
-                  btn={botaoNavBar}
+                  btn={"botaoReciclavel"}
                 />
               </Link>
             </>
           )}
         </ul>
+      </div>
+      <div onClick={navToggle} className={toggleIcon}>
+        <div className="trace1"></div>
+        <div className="trace2"></div>
+        <div className="trace3"></div>
       </div>
     </nav>
   );
