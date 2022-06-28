@@ -1,5 +1,8 @@
+.portalContainer{
+    min-height: 100vh;
+}
 .headerPortal{
-    height: 50px;
+    height: 6vh;
     background-color: brown;
     color: white;
     display: flex;

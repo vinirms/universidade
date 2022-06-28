@@ -1,6 +1,6 @@
 /* corpo do artigo */
 .mainArticle{
-    /* background-color: rgba(207, 206, 206, 0.374); */
+
     width: 60%;
     margin: auto;
     display: flex;
@@ -68,6 +68,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
     color: white;
     gap: 10px;
 }
@@ -80,7 +81,7 @@
 .modalidade{
     min-height: 150px;
     background-color:#ffd726b1  ;
-    min-width:60vw;
+    min-width:59.5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,13 +106,15 @@
     min-width: 30%;
     outline: none;
     padding: 2px 10px;
-    border-radius: 5px;
+    border: 2px solid #4040FF;
+    border-radius: 10px;
 }
 .opcoes select{
     min-width:20% ;
     height: 40px;
     text-align: center;
-    border-radius: 5px;
+    border: 2px solid #4040FF;
+    border-radius: 10px;
 }
 
 @media (max-width:800px) {

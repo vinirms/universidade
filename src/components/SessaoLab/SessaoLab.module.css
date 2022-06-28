@@ -17,24 +17,21 @@
 }
 
 .conteudoSessaoImg{
-    height: 200px;
+    min-height: 200px;
     display: flex;
     gap: 10px;
     margin-top: 10px;
-    transition: 0.5s;
+   
 }
 
+.conteudoSessaoImg img{
+    width: 350px;
+    /* transition: .3s ease-in-out; */
+}
+.conteudoSessaoImg img:hover{
+    width: 400px;
+}
 
-.conteudoSessao img:hover{
-    height: 250px;
-    transition: 0.5s;
-}
-.conteudoSessao:hover{
-    height: 300px;
-    z-index: 1;
-    cursor: pointer;
-    transition: 0.5s;
-}
 
 @media (max-width:800px) {
     .sessaoEstrutura img{
@@ -56,6 +53,11 @@
     .conteudoSessaoImg{
     flex-direction: column;
      
-      height: 430px;
+    height: 430px;
     }
+    
+    .conteudoSessaoImg img:hover{
+        width: 300px;
+    }
+    
 }

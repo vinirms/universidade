@@ -7,17 +7,18 @@ const PortalAluno = () => {
   return (
     <>
       <NavBar />
-      <header className={styles.headerPortal}>
-        <nav className={styles.navPortal}>
-          <ul>
-            <li>Dados academicos</li>
-            <li>Dados Financeiros</li>
-            <li>Biblioteca Virtual</li>
-            <li>Atividades Complementares</li>
-          </ul>
-        </nav>
-      </header>
-      <Rodape />
+      <main className={styles.portalContainer}>
+        <header className={styles.headerPortal}>
+          <nav className={styles.navPortal}>
+            <ul>
+              <li>Dados academicos</li>
+              <li>Dados Financeiros</li>
+              <li>Biblioteca Virtual</li>
+              <li>Atividades Complementares</li>
+            </ul>
+          </nav>
+        </header>
+      </main>
     </>
   );
 };
