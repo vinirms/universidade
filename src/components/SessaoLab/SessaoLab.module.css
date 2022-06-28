@@ -25,7 +25,7 @@
 }
 
 
-/* .conteudoSessao img:hover{
+.conteudoSessao img:hover{
     height: 250px;
     transition: 0.5s;
 }
@@ -34,7 +34,7 @@
     z-index: 1;
     cursor: pointer;
     transition: 0.5s;
-} */
+}
 
 @media (max-width:800px) {
     .sessaoEstrutura img{
